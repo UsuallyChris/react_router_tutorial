@@ -5,12 +5,17 @@ import Nav from './Nav';
 import About from './About';
 import Shop from './Shop';
 
+import {BrowserRouter as Router, Switch, Link, Route} from 'react-router-dom'
+
 function App() {
   return (
-    <div className="App">
-      <Nav />
-      
-    </div>
+    <Router>
+      <div className="App">
+        <Nav />
+        <Route path='/about' component={About}/>
+        <Route path='/shop' component={Shop}/>
+      </div>
+    </Router>
   );
 }
 
